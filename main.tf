@@ -8,7 +8,7 @@ data "aws_vpc" "default" {
 data "aws_subnet" "example" {
   vpc_id = data.aws_vpc.default.id
   tags = {
-    Name ="Subnet-B"
+    name ="Subnet-B"
   }
 }
 resource "aws_security_group" "instance_sg" {
