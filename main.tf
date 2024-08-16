@@ -5,9 +5,8 @@ provider "aws" {
 data "aws_vpc" "default" {
   default = true
 }
-data "aws_subnet" "example" {
-  vpc_id = data.aws_vpc.default.id
-  tags = {
+data "aws_subnets" "example" {
+   tags = {
     name ="Subnet-B"
   }
 }
