@@ -36,7 +36,7 @@ resource "aws_security_group" "instance_sg" {
 resource "aws_instance" "ec2-instance" {
     ami = var.ami_id
     instance_type = var.instance_type
-    subnet_id = data.aws_subnet.example
+
     key_name = var.ssh_key_name
 tags = {
     Name ="My First instance"
